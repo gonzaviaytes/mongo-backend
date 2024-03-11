@@ -17,6 +17,9 @@ const app = express();
 //configurar CORS
 app.use(cors())
 
+// Carpeta publica
+app.use(express.static('public'));
+
 // Lectura y parseo del body. esto va antes de las rutas. si no primero hace las rutas y luego hace el parseo del body y da problemas
 app.use(express.json());
 
